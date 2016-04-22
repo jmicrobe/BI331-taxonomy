@@ -2,9 +2,9 @@
 
 **This repository contains material needed to complete the BI331 taxonomy assignment. It is separated into three sections as markdown (.md) files that should be read in this order:**
 
-* [README.md](): The current file, contains background information on the study of microbial ecology and the specific data that we will be analyzing.
-* [ANALYSIS.md](): Tutorial for processing and analyzing the given data.
-* [ASSIGNMENT.md](): Instructions for what to turn in for this exercise.
+* [README.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/README.md): The current file, contains background information on the study of microbial ecology and the specific data that we will be analyzing.
+* [ANALYSIS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ANALYSIS.md): Tutorial for processing and analyzing the given data.
+* [ASSIGNMENT.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ASSIGNMENT.md): Instructions for what to turn in for this exercise.
 
 ## Learning goals
 
@@ -12,11 +12,11 @@ Students will learn how DNA sequenced-based, culture-independent techniques are 
 
 ## Table of Contents  
 
-* [Microbial ecology]()
-* [What is bioinformatics?]()  
-* [Why use DNA sequencing to study microbes?]()
-* [Assignment data background]()
-* [References]()
+* [Microbial ecology](#microbial-ecology)
+* [What is bioinformatics?](#what-is-bioinformatics)
+* [Why use DNA sequencing to study microbes?](#why-use-dna-sequencing-to-study-microbes)
+* [Assignment data background](#assignment-data-background)
+* [References](#references)
 
 ## Microbial ecology
 What is a microbial community?
