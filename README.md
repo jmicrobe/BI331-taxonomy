@@ -1,23 +1,19 @@
 # Culture-independent methods for studying microbial communities
 
-Learning goals
-------
+**The following README includes the background information necessary to understand the assignment. The assignment itself is located in this repository as ASSIGNMENT.md**
+
+## Learning goals
+
 Students will learn how DNA sequenced-based, culture-independent techniques are used to study microbial communities. Students will formulate hypotheses and test them using bioinformatic and statistical tools to compare microbial communities.
 
-##### Table of Contents  
-Background
-1. [Microbial ecology](#ecology)   
-2. [What is bioinformatics?](#headers)   
-3. [Why use DNA sequencing to study microbes?](#headers)
+## Table of Contents  
 
-Assignment  
-1. [Study background](#headers)  
-2. [Hypotheses](#headers)  
-3. [Part 1: Taxonomic classification using RDP](#headers)  
-4. [Part 2: Statistical community comparison using R](#headers)  
-5. [Results & Interpretation](#headers)  
-<a name="ecology"/>
-## Methods background</a>
+1. [Microbial ecology](#microbial-ecology)   
+2. [What is bioinformatics?](#what-is-bioinformatics)   
+3. [Why use DNA sequencing to study microbes?]
+3. [Assignment data background](#assignment)  
+
+## Microbial ecology
 What is a microbial community?
 Ecological communities are associations of species that co-occur in the same location at the same time. Microbial community ecology is a field of scientific study focused on the biotic and abiotic factors that determine how populations of microorganisms associate to form communities, how communities interact with each other, and how communities interact with the environment (1).
 
@@ -39,18 +35,3 @@ For this exercise you will be analyzing 16S rRNA gene sequences from human gut s
 Microorganisms in the human gastrointestinal tract (GI) perform functions and produce compounds essential for our health. They break down complex molecules (e.g. complex polysaccharides) from the food we eat making them easier for our cells to digest. They produce essential vitamins (e.g. B12 and K) and amino acids, which are absorbed by cells in the gut and then used throughout the body (1). This community of microorganisms inhabiting our gut is known as the human gut microbiome.
 
 The composition and function of the gut microbiome varies among individuals and populations. Factors such as ethnicity, diet (e.g. diets rich in protein versus diets rich in complex carbohydrates), and genetics are known to contribute to the variation we see in the human gut microbiome (2). Variation in the composition of these microbial communities also leads to variation in their function. One interesting example of this is a study that compared the gut microbiome of Japanese and American populations (3). Researchers found a high abundance of bacteria carrying a specific gene in Japanese populations compared to American populations. This gene helps the microbes break down complex carbohydrates found in the seaweed used to make nori, one the main ingredients in sushi and a common ingredient in other Japanese cuisine. Because seaweed is a larger part of the diet in Japanese populations compared to American populations, the guts of Japanese populations harbor this seaweed-digesting bacterium, which helps them get the most energy possible from their food.  (There’s another interesting level to this story.  The gut bacteria that carry this gene actually acquired it though horizontal gene transfer from marine bacteria that colonize the seaweed in the ocean!). This is just one of many examples of how diet can affect the composition and function of gut microbial communities.
-
-## Hypotheses
-For each of the following questions provide your answer as well as one sentence stating your formal hypothesis.
-1.	In general, do you think the Europe (EU) communities will be very similar or very different to the Burkina Faso (BF) communities? Why?
-
-2.	Do you think the EU communities will differ in the number of types of bacteria compared to the BF communities?
-
-3.	Do you think the communities will differ in evenness? Evenness is highest when the taxonomic groups in a sample have the same abundance.
-
-4.	Do you think the communities will differ in their function? How?
-
-```
-Hey look this is a place to put code
-
-```
