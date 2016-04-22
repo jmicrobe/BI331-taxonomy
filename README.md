@@ -1,21 +1,23 @@
 # Culture-independent methods for studying microbial communities
 
-##### Table of Contents  
-[Learning goals](#headers)  
-[Methods background](#emphasis)   
-[What is bioinformatics?](#headers)   
-[Why use DNA sequencing to study microbes?](#headers)    
-[Study background](#headers)  
-[Hypotheses](#headers)  
-[Part 1: Taxonomic classification using RDP](#headers)  
-[Part 2: Statistical community comparison using R](#headers)  
-[Results & Interpretation](#headers)  
-<a name="headers"/>
-
-## Learning goals
+Learning goals
+------
 Students will learn how DNA sequenced-based, culture-independent techniques are used to study microbial communities. Students will formulate hypotheses and test them using bioinformatic and statistical tools to compare microbial communities.
 
-## Methods background
+##### Table of Contents  
+Background
+1. [Microbial ecology](#ecology)   
+2. [What is bioinformatics?](#headers)   
+3. [Why use DNA sequencing to study microbes?](#headers)
+
+Assignment  
+1. [Study background](#headers)  
+2. [Hypotheses](#headers)  
+3. [Part 1: Taxonomic classification using RDP](#headers)  
+4. [Part 2: Statistical community comparison using R](#headers)  
+5. [Results & Interpretation](#headers)  
+<a name="ecology"/>
+## Methods background</a>
 What is a microbial community?
 Ecological communities are associations of species that co-occur in the same location at the same time. Microbial community ecology is a field of scientific study focused on the biotic and abiotic factors that determine how populations of microorganisms associate to form communities, how communities interact with each other, and how communities interact with the environment (1).
 
