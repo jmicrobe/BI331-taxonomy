@@ -12,11 +12,11 @@ Students will learn how DNA sequenced-based, culture-independent techniques are 
 
 ## Table of Contents  
 
-* [Microbial ecology]
-* [What is bioinformatics?]  
-* [Why use DNA sequencing to study microbes?]
-* [Assignment data background]
-* [References]
+* [Microbial ecology]()
+* [What is bioinformatics?]()  
+* [Why use DNA sequencing to study microbes?]()
+* [Assignment data background]()
+* [References]()
 
 ## Microbial ecology
 What is a microbial community?
@@ -42,3 +42,7 @@ Microorganisms in the human gastrointestinal tract (GI) perform functions and pr
 The composition and function of the gut microbiome varies among individuals and populations. Factors such as ethnicity, diet (e.g. diets rich in protein versus diets rich in complex carbohydrates), and genetics are known to contribute to the variation we see in the human gut microbiome (2). Variation in the composition of these microbial communities also leads to variation in their function. One interesting example of this is a study that compared the gut microbiome of Japanese and American populations (3). Researchers found a high abundance of bacteria carrying a specific gene in Japanese populations compared to American populations. This gene helps the microbes break down complex carbohydrates found in the seaweed used to make nori, one the main ingredients in sushi and a common ingredient in other Japanese cuisine. Because seaweed is a larger part of the diet in Japanese populations compared to American populations, the guts of Japanese populations harbor this seaweed-digesting bacterium, which helps them get the most energy possible from their food.  (There’s another interesting level to this story.  The gut bacteria that carry this gene actually acquired it though horizontal gene transfer from marine bacteria that colonize the seaweed in the ocean!). This is just one of many examples of how diet can affect the composition and function of gut microbial communities.
 
 ## References
+1.	Madigan, Michael T., et al. "Biology of Microorganisms." (2012).
+2.	Yatsunenko, Tanya, et al. "Human gut microbiome viewed across age and geography." Nature 486.7402 (2012): 222-227.
+3.	Hehemann, Jan-Hendrik, et al. "Transfer of carbohydrate-active enzymes from marine bacteria to Japanese gut microbiota." Nature (2010): 908-912.
+4.	Cole, J. R., et al. "The Ribosomal Database Project: improved alignments and new tools for rRNA analysis." Nucleic Acids Research (2009): D141-D145.
