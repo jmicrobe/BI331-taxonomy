@@ -41,9 +41,9 @@ Your output should have repeating lines that look something like this:
 >10BF.397096_4143 F4HTPAO04ECMBR orig_bc=TCAGATCAGACAC new_bc=TCAGATCAGACAC bc_diffs=0
 GTCCGCACGGTAAACGATGGATGCCCGCCTGTTGGTCTGAATAGGTCAGCGGCCAAGCGAAAGCATTAAGCATCCCACCTGGGGAGTACGCCGGCAACGGTGAAACTCAAAGGAATTGACGGGGGCCCGCACAAGCGGAGGAACATGTGGTTTAATTCGATGATACGCGAGGAACCTTACCCGGGCTTGAATTGCAGAGGAAGGATTTGGAGACAATGACGCCCTTCGGGGTCGTCTGTGAAGGTG
 ```
-The above represents one *entry* in the fasta file. In the context of this study this represents one individual sequence of a 16S rRNA gene from the a human fecal sample. How many individual entries do we have in this particular file?
+The above represents **one entry** in the fasta file. In the context of this study this represents one individual sequence of a 16S rRNA gene from a human fecal sample. How many individual entries do we have in this particular file?
 
-You could count these entries manually, but we're lazy programmers so want to find a way to make the computer do the work. Note that each entry has two lines: The first line, or header - starts with a `>` followed by what looks to be metadata. The second line is the corresponding nucleotide sequence, `GTCCG...` etc.
+You could count these entries manually, but we're lazy programmers so want to find a way to make the computer do the work. Note that each entry has two lines: The first line, or header - starts with a `>` followed by what looks to be metadata. The second line is the corresponding nucleotide sequence, `GTCCG...` etc. ([more info on the fasta format](https://en.wikipedia.org/wiki/FASTA_format))
 
 With bash (the language you've been using in the terminal) there are many utilities to explore files, including the `ls` and `head` commands we used earlier. Let's try `grep`, which can be used to search a file and return matching queries. Since each entry starts with `>` we'll look for that:
 
@@ -57,11 +57,13 @@ But that still doesn't tell us **how many** entries there are, and we're still t
 ```
 grep '>' BF_sampes.fasta | wc -l
 ```
-You should have gotten `1190` as output. This means that in our BF_samples.fasta file there are 1190 entries, or 1190 sequenced 16s rRNA genes.
+You should have gotten `1190` as output. This means that in our BF_samples.fasta file there are 1190 entries, or 1190 16s rRNA genes.
 
 ## 2. Taxonomic classification of sequences
 
-Even though we counted the number of entries in our BF_samples.fasta file to be 1190, that doesn't mean there are 1190 *different* OTUs (see [README]((https://github.com/jmicrobe/BI331-taxonomy/blob/master/README.md)) for a reminder of what an OTU is).
+Even though we counted the number of entries in our BF_samples.fasta file to be 1190, that doesn't mean there are 1190 *different* species in our sample. As mentioned in the [README.md](), we can use the RDPTools classifier to assign taxonomy information to our sequences.
+
+Enter the following command in terminal, noting that `/path/to/classifier.jar` will need to be changed depending on the location of `classifier.jar` on your computer.
 
 
 
@@ -69,12 +71,16 @@ Even though we counted the number of entries in our BF_samples.fasta file to be 
 java -Xmx1g -jar /path/to/classifier.jar -o BF_classified.txt -h BF_hier.txt BF_samples.fasta
 ```
 
-We also want to use RDP's *libcompare* tool in order compare to test for significant differences between our two samples. The following command will create the file "libcompare.txt" that we can use for this analysis:
+We also want to use RDP's libcompare tool in order compare to test for significant differences between our two samples. The following command will create the file "libcompare.txt" that we can use for this analysis. (Again, note that you will need to enter the correct path to your classifier.)
 ```
 java -Xmx1g -jar /path/to/classifier.jar libcompare -q1 BF_samples.fasta -q2 EU_samples.fasta -o libcompare.txt
 ```
 
 ## 3. Statistical anlyses in RStudio
-In steps 1 and 2 we utilized the programming language Bash to clone the class repository, preview our files, and run commands for the RDP Tools program. If you'd like to learn more about Bash there is a great tutorial [**here**](http://swcarpentry.github.io/shell-novice/) provided by [Software Carpentry](http://software-carpentry.org/) that is geared towards scientists.
+In steps 1 and 2 we utilized the programming language bash to clone the class repository, preview our files, and run commands for the RDP Tools program. If you'd like to learn more about bash there is a great tutorial [**here**](http://swcarpentry.github.io/shell-novice/) provided by [Software Carpentry](http://software-carpentry.org/) that is geared towards scientists. More helpful links can be found on the [LINKS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/LINKS.md) page of this repository.
 
-At this point we'll use a different language called R, which was developed for statistical computing and graphics. Many of these things can (and used to) be performed in Excel but R provides a more robust approach, and the program RStudio provides a relatively easy to use graphical interface. Also most of the code needed to analyze your files has been provided.
+At this point we'll use a different language called R, which was developed for statistical computing and graphics. Many of these things can (and used to) be performed in Excel but R provides a more robust approach, and the program RStudio provides a relatively easy to use graphical interface.
+
+For the rest of this tutorial you'll want to open the file rscript.R in RStudio on your computer. The code is provided for you, with comments explaining each step. During class we'll go over some basics of R and RStudio, and how to run the analysis script provided.
+
+After you've run your analyses and generated your figures have a look at [ASSIGNMENT.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ASSIGNMENT.md) for guidance on interpreting your results, and suggestions for how you might modify the R script to extend your understanding. 
