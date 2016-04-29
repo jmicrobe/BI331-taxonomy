@@ -28,7 +28,8 @@ ls
 ```
 You should see the following:
 ```
-ANALYSIS.md		ASSIGNMENT.md		BF_samples.fasta	EU_samples.fasta	README.md
+ANALYSIS.md		BF_samples.fasta	LINKS.md		rscript.R
+ASSIGNMENT.md		EU_samples.fasta	README.md		taxonomy_guide.pdf
 ```
 Let's peek into the .fasta files. The fasta format is used to contain sequencing data. We can use the head command to see the first several lines of the file:
 
