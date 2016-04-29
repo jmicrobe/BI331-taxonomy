@@ -4,13 +4,8 @@
 
 * [README.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/README.md): The current file, contains background information on the study of microbial ecology and the specific data that we will be analyzing.
 * [ANALYSIS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ANALYSIS.md): Tutorial for processing and analyzing the given data.
-<<<<<<< HEAD
 * [ASSIGNMENT.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ASSIGNMENT.md): Questions to help frame your understanding of microbial ecology and the bioinformatics exercise, as well as suggestions for altering the R script to gain more practice with the material.
 * [LINKS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/LINKS.md): Optional extra links you may find helpful for learning more about microbial ecology, as well as tutorials and learning material for bionformatics.
-=======
-* [ASSIGNMENT.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/ASSIGNMENT.md): Instructions for interpreting your results and suggestions for modifying/enhancing the provided R script.
-* [LINKS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/LINKS.md): Optional extra links you may find helpful.
->>>>>>> b886c750a4d1dd3e0673aa586ecd1f8c938d270e
 
 ## Learning goals
 
@@ -27,12 +22,7 @@ Students will learn how DNA sequenced-based, culture-independent techniques are 
 * [References](#references)
 
 ## Microbial ecology
-What is a microbial community?
-<<<<<<< HEAD
-Ecological communities are associations of species that co-occur in the same location at the same time. Microbial community ecology is a field of scientific study focused on the biotic and abiotic factors that determine how populations of microorganisms associate to form communities, how communities interact with each other, and how communities interact with the environment [<sup>1</sup>](#references).
-=======
-Ecological communities are associations of species that co-occur in the same location at the same time. Microbial community ecology is a field of scientific study focused on the biotic and abiotic factors that determine how populations of microorganisms associate to form communities, how communities interact with each other, and how communities interact with the environment [<sup>1</sup>)](#references).
->>>>>>> b886c750a4d1dd3e0673aa586ecd1f8c938d270e
+What is a microbial community? Ecological communities are associations of species that co-occur in the same location at the same time. Microbial community ecology is a field of scientific study focused on the biotic and abiotic factors that determine how populations of microorganisms associate to form communities, how communities interact with each other, and how communities interact with the environment [<sup>1</sup>](#references).
 
 ## What is bioinformatics?
 Bioinformatics is a field of science that combines aspects of biology, computer science, and information technology to analyze biological information using computers and statistical techniques. The primary goal of bioinformatics is to develop software tools to generate useful biological knowledge. In microbial ecology, bioinformatic tools are typically used to analyze DNA sequence data. These data can include sequences from cultured organisms or sequences from communities. The latter is discussed in more detail below.
