@@ -56,7 +56,7 @@ Whoa! That printed out a bunch of lines, all starting with `>`. What `grep` did 
 But that still doesn't tell us **how many** entries there are, and we're still too lazy to count them all. We can use the utility `wc` which stands for "word count" and the option `-l` which will only count the number of lines. But we want to do that on the output of our `grep` search, not the entire file, so we will use a `|` (pipe) to do both at once:
 
 ```
-grep '>' BF_sampes.fasta | wc -l
+grep '>' BF_samples.fasta | wc -l
 ```
 You should have gotten `1190` as output. This means that in our BF_samples.fasta file there are 1190 entries, or 1190 16s rRNA sequences.
 
