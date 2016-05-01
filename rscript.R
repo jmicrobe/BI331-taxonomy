@@ -21,8 +21,8 @@ EU_table <- read.table("EU_heir.txt", header = TRUE, sep = "\t")
 
 #reformat and combine our tables
 bf <- BF_table %>%
-    #pull out only the rows that have phylum-level data
-    filter(rank=="phylum") %>%
+    #pull out only the rows that have phylum-level data (including unclassified)
+    filter(grepl('Root;rootrank;Bacteria;domain;unclassified_Bacteria', lineage) | rank=="phylum") %>%
     #we only need the "name" and  ".fasta" columns:
     select(one_of(c("name", "BF_samples.fasta"))) %>%
     #to help join our two samples we make a new column called "sample" with every entry showing "Burkina Faso"
@@ -32,7 +32,7 @@ bf <- BF_table %>%
 
 #Repeat for the Europe table
 eu <-EU_table %>%
-  filter(rank=="phylum") %>%
+  filter(grepl('Root;rootrank;Bacteria;domain;unclassified_Bacteria', lineage) | rank=="phylum") %>%
   select(one_of(c("name", "EU_samples.fasta"))) %>%
   mutate(sample = "Europe") %>%
   rename(OTUs = EU_samples.fasta)
@@ -66,6 +66,7 @@ libcompare <- read.table("libcompare.txt", header = TRUE, sep = "\t", skip = 3)
 #use dplyr to reshape the data in order to plot 
 sig <- libcompare %>%
   rename("BurkinaFaso" = Sample1, "Europe" = Sample2) %>%
+  #pull out only phylum level - note we aren't looking at unclassified in this case
   filter(Rank == "phylum") %>%
   #here we use the gather function to move OTU counts into one column and create a new column for the country of origin
   gather(sample, OTUs, BurkinaFaso, Europe) %>%
