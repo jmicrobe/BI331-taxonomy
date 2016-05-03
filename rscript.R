@@ -66,9 +66,9 @@ sig <- libcompare %>%
   filter(Rank == "phylum") %>%
   #here we use the gather function to move OTU counts into one column and create a new column for the country of origin
   gather(sample, OTUs, BurkinaFaso, Europe) %>%
-  #arrange in descending values of significance (lower = more significance) and group this by name
+  #arrange in ascending  values of significance (lower = more significance) and group this by name
   arrange(Significance, Name) %>%
-  #filter the lowest 8 rows, or 4 phyla (from each sample)
+  #filter the top 8 rows, or 4 phyla (from each sample)
   do(head(., n=8))
 
 #use ggplot to create a clustered bar chart  
