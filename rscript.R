@@ -2,14 +2,10 @@
 setwd("~/Desktop/BI331-taxonomy/")
 
 #Install and load packages needed for this script
-install.packages("dplyr")
-install.packages("tidyr")
-install.packages("ggplot2")
-install.packages("scales") 
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(scales)
+require(dplyr)
+require(tidyr)
+require(ggplot2)
+require(scales)
 
 ###--- PART ONE: TAXONOMIC COMPARISON ---###
 
@@ -70,10 +66,10 @@ sig <- libcompare %>%
   filter(Rank == "phylum") %>%
   #here we use the gather function to move OTU counts into one column and create a new column for the country of origin
   gather(sample, OTUs, BurkinaFaso, Europe) %>%
-  #arrange in descending values of significance (lower = more significance)
-  arrange(desc(Significance)) %>%
+  #arrange in descending values of significance (lower = more significance) and group this by name
+  arrange(Significance, Name) %>%
   #filter the lowest 8 rows, or 4 phyla (from each sample)
-  do(tail(., n=8))
+  do(head(., n=8))
 
 #use ggplot to create a clustered bar chart  
 ggplot(sig, aes(x=Name, y=OTUs, fill=sample)) + 
@@ -82,7 +78,9 @@ ggplot(sig, aes(x=Name, y=OTUs, fill=sample)) +
   #make it pretty
   scale_fill_brewer(palette = "Accent", name = "Origin") +
   #add informative lables
-  labs(title ="Top Significantly Different Phyla:\nBurkina Faso vs. Europe", x = "Phylum", y = "OTUs")
+  labs(title ="Top Significantly Different Phyla:\nBurkina Faso vs. Europe", x = "Phylum", y = "OTUs") +
+  #tell ggplot to 
+  scale_x_discrete(limits = sig$Name)
 
 #save to a file in your working directory
 ggsave("significance_clustered_bar.png")

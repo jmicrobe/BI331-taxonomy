@@ -16,6 +16,7 @@ Students will learn how DNA sequenced-based, culture-independent techniques are 
 * [Microbial ecology](#microbial-ecology)
 * [What is bioinformatics?](#what-is-bioinformatics)
 * [Why use DNA sequencing to study microbes?](#why-use-dna-sequencing-to-study-microbes)
+* [What is "Open Science?"](#what-is-open-science)
 * [Assignment data background](#assignment-data-background)
 * [Assignment overview](#assignment-overview)
 * [Acknowledgments](#acknowledgments)
@@ -32,10 +33,20 @@ Greater than 99% of the microbes found in nature cannot be cultured and studied 
 
 The 16S rRNA gene is one gene of choice for studying microbial communities for three primary reasons. First, all bacteria have at least one copy of the gene in their genome. Second, there are regions of the gene sequence that are highly variable (which allows us to distinguish among closely related bacteria) and other regions that are more conserved (which allows us to compare among more distantly related groups). Third, it is phylogenetically conserved. This means that closely related bacteria have more similar 16S rRNA gene sequences than do distantly related bacteria.
 
+## What is "Open Science"?
+The scientific data and tools used in this exercise are made possible because of a push for what's known as "open science". Open science allows for greater collaboration, reproducibility, and accountability with regards to scientific data. [The OpenScience project](http://www.openscience.org/blog/?p=269) lists the following fundamental goals of open science:
+
+* Transparency in experimental methodology, observation, and collection of data.
+* Public availability and reusability of scientific data.
+* Public accessibility and transparency of scientific communication.
+* Using web-based tools to facilitate scientific collaboration.
+
+For our purposes, open science provides an excellent avenue for learning about how bioinformatics tools are used without having to generate our own microbiome data.
+
 ## Assignment data background
 ### Study data
 
-For this exercise you will be analyzing 16S rRNA gene sequences from human gut samples. The samples were collected from children in Europe (14 samples) and a rural African village in Burkina Faso (14 samples).
+For this exercise you will be analyzing 16S rRNA gene sequences from human gut samples. The samples were collected from children in Europe (14 samples) and a rural African village in Burkina Faso (14 samples). The research for this study was published by Filippo et al. (2010)[<sup>5</sup>](#references) and the data made publicly available on the [European Nucleotide Archive website](http://www.ebi.ac.uk/ena/data/view/ERP000133).
 
 ### The human gut microbiome
 
@@ -57,3 +68,4 @@ This exercise was originally written and graciously provided  by Dr. Ann Klein i
 2.	Yatsunenko, Tanya, et al. "Human gut microbiome viewed across age and geography." Nature 486.7402 (2012): 222-227.
 3.	Hehemann, Jan-Hendrik, et al. "Transfer of carbohydrate-active enzymes from marine bacteria to Japanese gut microbiota." Nature (2010): 908-912.
 4.	Cole, J. R., et al. "The Ribosomal Database Project: improved alignments and new tools for rRNA analysis." Nucleic Acids Research (2009): D141-D145.
+5. De Filippo, C., Cavalieri, D., Di Paola, M., Ramazzotti, M., Poullet, J. B., Massart, S., … Lionetti, P. (2010). Impact of diet in shaping gut microbiota revealed by a comparative study in children from Europe and rural Africa. Proceedings of the National Academy of Sciences of the United States of America, 107(33), 14691–6.
