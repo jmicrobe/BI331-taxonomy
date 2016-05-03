@@ -79,7 +79,7 @@ ggplot(sig, aes(x=Name, y=OTUs, fill=sample)) +
   scale_fill_brewer(palette = "Accent", name = "Origin") +
   #add informative lables
   labs(title ="Top Significantly Different Phyla:\nBurkina Faso vs. Europe", x = "Phylum", y = "OTUs") +
-  #tell ggplot to 
+  #ggplot defaults to alphabetical order, tell it instead to use the order in our data frame, grouped by Name: 
   scale_x_discrete(limits = sig$Name)
 
 #save to a file in your working directory
