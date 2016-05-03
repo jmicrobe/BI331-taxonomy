@@ -4,7 +4,8 @@ Included below are links to resources and tutorials related to the topics covere
 
 ## Microbial ecology
 * [The Human Microbiome Project](http://hmpdacc.org/) - The National Institute of Health's central repository for human microbiome data and research.  
-* [Berkley Lab's Microbes to Biomes (M2B) Initiative](http://m2b.lbl.gov/about/) - Berkley Lab's microbiome projects focus on both human and soil microbiomes with an emphasis on revealing, decoding, and harnessing microbes.
+* [Berkley Lab's Microbes to Biomes (M2B) Initiative](http://m2b.lbl.gov/about/) - Berkeley Lab's microbiome projects focus on both human and soil microbiomes with an emphasis on revealing, decoding, and harnessing microbes.
+* [UO META Center for Systems Biology](http://meta.uoregon.edu/) - This center at the University of Oregon studies how host-microbe systems work in order to use this knowledge to advance human health.
 * [Biology and the Built Environment at UO](http://biobe.uoregon.edu/) - This center at UO investigates the microbial ecology of indoor environments.
 * [NASA's Astrobiology Program](https://astrobiology.nasa.gov/about/history-of-astrobiology/) - Astrobiology is the study of the origin, evolution, distribution, and future of life in the Universe. Microbial ecology is an important part of this, including the study of microbes in extreme environments.
 
