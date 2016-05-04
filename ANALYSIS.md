@@ -44,7 +44,7 @@ GTCCGCACGGTAAACGATGGATGCCCGCCTGTTGGTCTGAATAGGTCAGCGGCCAAGCGAAAGCATTAAGCATCCCACCT
 ```
 The above represents **one entry** in the fasta file. In the context of this study this represents one individual sequence of a 16S rRNA gene from a human fecal sample. How many individual entries do we have in this particular file?
 
-You could count these entries manually, but we're lazy programmers so want to find a way to make the computer do the work. Note that each entry has two lines: The first line, or header - starts with a `>` followed by what looks to be metadata. The second line is the corresponding nucleotide sequence, `GTCCG...` etc. ([more info on the fasta format](https://en.wikipedia.org/wiki/FASTA_format)).
+You could count these entries manually, but we're lazy programmers so we want to find a way to make the computer do the work. Note that each entry has two lines: The first line, known as the header, starts with a `>` followed by what looks to be metadata. The second line is the corresponding nucleotide sequence, `GTCCG...` etc. ([more info on the fasta format](https://en.wikipedia.org/wiki/FASTA_format)).
 
 With bash (the language you've been using in the terminal) there are many utilities to explore files, including the `ls` and `head` commands we used earlier. Let's try `grep`, which can be used to search a file and return matching queries. Since each entry starts with `>` we can look for that:
 
@@ -70,7 +70,7 @@ Enter the following command in terminal, noting that `/path/to/classifier.jar` w
 java -Xmx1g -jar /path/to/classifier.jar -o BF_classified.txt -h BF_hier.txt BF_samples.fasta
 ```
 
-We also want to use RDP's libcompare tool in order compare to test for significant differences between our two samples. The following command will create the file "libcompare.txt" that we can use for this analysis. Again, note that you will need to enter the correct path to your classifier.
+We also want to use RDP's libcompare tool in order to test for significant differences between our two samples. The following command will create the file "libcompare.txt" that we can use for this analysis. Again, note that you will need to enter the correct path to your classifier.
 ```
 java -Xmx1g -jar /path/to/classifier.jar libcompare -q1 BF_samples.fasta -q2 EU_samples.fasta -o libcompare.txt
 ```
