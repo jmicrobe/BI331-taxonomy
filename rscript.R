@@ -2,16 +2,16 @@
 setwd("~/Desktop/BI331-taxonomy/")
 
 #Install and load packages needed for this script
-require(dplyr)
-require(tidyr)
-require(ggplot2)
-require(scales)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
 
 ###--- PART ONE: TAXONOMIC COMPARISON ---###
 
 #Load in the data generated from the RDP classifier. This script uses the heirarchy files:
-BF_table <- read.table("BF_heir.txt", header = TRUE, sep = "\t")
-EU_table <- read.table("EU_heir.txt", header = TRUE, sep = "\t")
+BF_table <- read.table("BF_hier.txt", header = TRUE, sep = "\t")
+EU_table <- read.table("EU_hier.txt", header = TRUE, sep = "\t")
 
 #the dplyr package is a great tool for manipulating data frames. In order to make our plots work we need to...
 
@@ -37,12 +37,12 @@ eu <-EU_table %>%
 abundance_table <- rbind(bf, eu)
 
 #Add a new column that corresponds to the percentage of the phylum in the sample (BF or EU)
-abundance_table <- group_by(abundance_table, sample) %>% 
-  mutate(percent=as.numeric(paste0(round(OTUs/sum(OTUs), 4)))) %>% 
+abundance_table <- group_by(abundance_table, sample) %>%
+  mutate(percent=as.numeric(paste0(round(OTUs/sum(OTUs), 4)))) %>%
   ungroup
 
 # plot using the ggplot2 package:
-ggplot(abundance_table, aes(x=sample, y=percent, fill=name)) + 
+ggplot(abundance_table, aes(x=sample, y=percent, fill=name)) +
   #instead of the default "counts" binning make the y axis correspond to percents
   geom_bar(stat="identity") +
   #make it pretty
@@ -52,14 +52,14 @@ ggplot(abundance_table, aes(x=sample, y=percent, fill=name)) +
 
 #save the plot (this creates a picture in your current working directory)
 ggsave("abundance_stacked_barplot.png")
-  
+
 
 ###--- PART TWO: STATISTICAL COMMUNITY COMPARISON ---###
 
 #read in the libcompare file
 libcompare <- read.table("libcompare.txt", header = TRUE, sep = "\t", skip = 3)
 
-#use dplyr to reshape the data in order to plot 
+#use dplyr to reshape the data in order to plot
 sig <- libcompare %>%
   rename("BurkinaFaso" = Sample1, "Europe" = Sample2) %>%
   #pull out only phylum level - note we aren't looking at unclassified in this case
@@ -71,18 +71,16 @@ sig <- libcompare %>%
   #filter the top 8 rows, or 4 phyla (from each sample)
   do(head(., n=8))
 
-#use ggplot to create a clustered bar chart  
-ggplot(sig, aes(x=Name, y=OTUs, fill=sample)) + 
+#use ggplot to create a clustered bar chart
+ggplot(sig, aes(x=Name, y=OTUs, fill=sample)) +
   #make this a clustered bar (dodge) and instead of the default binning, use # of OTUs as y axis
   geom_bar(position="dodge", stat="identity") +
   #make it pretty
   scale_fill_brewer(palette = "Accent", name = "Origin") +
   #add informative lables
   labs(title ="Top Significantly Different Phyla:\nBurkina Faso vs. Europe", x = "Phylum", y = "OTUs") +
-  #ggplot defaults to alphabetical order, tell it instead to use the order in our data frame, grouped by Name: 
+  #ggplot defaults to alphabetical order, tell it instead to use the order in our data frame, grouped by Name:
   scale_x_discrete(limits = sig$Name)
 
 #save to a file in your working directory
 ggsave("significance_clustered_bar.png")
-  
-
