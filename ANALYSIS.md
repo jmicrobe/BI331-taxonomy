@@ -60,21 +60,26 @@ grep '>' BF_samples.fasta | wc -l
 ```
 You should have gotten `1190` as output. This means that in our BF_samples.fasta file there are 1190 entries, or 1190 16s rRNA sequences.
 
+
 ## Taxonomic classification of sequences
 
-Even though we counted the number of entries in our BF_samples.fasta file to be 1190, that doesn't mean there are 1190 *different* species in our sample. As mentioned in the [README.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/README.md), we can use the RDPTools classifier to assign taxonomy information to our sequences.
+Even though we counted the number of entries in our BF_samples.fasta file to be 1190, that doesn't mean there are 1190 *different* species in our sample. As mentioned in the [background](#exercise-overview), we can use the RDPTools classifier to assign taxonomy information to our sequences.
 
 Enter the following command in terminal, noting that `/path/to/classifier.jar` will need to be changed depending on the location of `classifier.jar` on your computer.
 
 ```
 java -Xmx1g -jar /path/to/classifier.jar -o BF_classified.txt -h BF_hier.txt BF_samples.fasta
 ```
+Repeat the previous command, but for EU_samples.fasta:
 
+```
+java -Xmx1g -jar /path/to/classifier.jar -o EU_classified.txt -h EU_hier.txt EU_samples.fasta
+```
 We also want to use RDP's libcompare tool in order to test for significant differences between our two samples. The following command will create the file "libcompare.txt" that we can use for this analysis. Again, note that you will need to enter the correct path to your classifier.
+
 ```
 java -Xmx1g -jar /path/to/classifier.jar libcompare -q1 BF_samples.fasta -q2 EU_samples.fasta -o libcompare.txt
 ```
-
 ## Statistical analyses in RStudio
 In steps 1 and 2 we utilized bash to clone the class repository, preview our files, and run commands for the RDP Tools program. If you'd like to learn more about bash there is a great tutorial [**here**](http://swcarpentry.github.io/shell-novice/) provided by [Software Carpentry](http://software-carpentry.org/) that is geared towards scientists. More helpful links can be found at [LINKS.md](https://github.com/jmicrobe/BI331-taxonomy/blob/master/LINKS.md).
 
